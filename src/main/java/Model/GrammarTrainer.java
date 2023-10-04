@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class GrammarTrainer {
@@ -12,6 +13,38 @@ public class GrammarTrainer {
 
 	private String input;
 
-	private Wordpair[] wordpair;
+	public GrammarTrainer() {
+		this.pair = new LinkedList<>();
+	}
+
+	public int getRight() {
+		return this.right;
+	}
+
+	public int getWrong() {
+		return this.wrong;
+	}
+
+	public void addWordpair(Wordpair pair) {
+		if(pair!=null)	{
+			this.pair.add(pair);
+		} else {
+			throw new IllegalArgumentException("Wordpair is null");
+		}
+	}
+
+	public Wordpair getWordpair(int index) {
+		if(index <= pair.size()-1)	{
+			return this.pair.get(index);
+		} else {
+			throw new IllegalArgumentException("Index doesn't exist");
+		}
+	}
+
+	public void setInput(String input) {
+		if(!input.equals(null))	{
+			this.input = input;
+		}
+	}
 
 }
