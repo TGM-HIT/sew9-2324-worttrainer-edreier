@@ -45,10 +45,11 @@ public class GrammarTrainerSave implements Save {
 	public GrammarTrainer load(String filename) {
 		GrammarTrainer g = new GrammarTrainer();
 		try(Scanner s = new Scanner(new BufferedReader(new FileReader(filename))))	{
-			while(s.hasNext()&& !s.hasNextInt())	{
+			while(s.hasNext() && !s.hasNextInt())	{
 				String word = s.nextLine();
-				URL url = new URL(s.nextLine());
+				String url = s.nextLine();
 				Wordpair pair = new Wordpair(word,url);
+				g.addWordpair(pair);
 			}
 
 			int right=s.nextInt();
@@ -58,7 +59,7 @@ public class GrammarTrainerSave implements Save {
 			g.setRight(right);
 			g.setWrong(wrong);
 			return g;
-		} catch (MalformedURLException | FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		return g;

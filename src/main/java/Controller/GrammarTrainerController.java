@@ -39,7 +39,7 @@ public class GrammarTrainerController implements ActionListener {
 			this.panel.enableReset(false);
 			this.panel.enableEnd(false);
 			this.panel.endMessage();
-			this.save.save("Worttrainer.txt");
+			this.save.save("GrammarTrainer.txt");
 		}
 
 		if(e.getActionCommand().equals("reset"))	{

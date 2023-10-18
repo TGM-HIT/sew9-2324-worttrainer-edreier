@@ -6,9 +6,9 @@ public class Wordpair {
 
 	private String word;
 
-	private URL url;
+	private String url;
 
-	public Wordpair(String word, URL url) {
+	public Wordpair(String word, String url) {
 		this.url = url;
 		this.word = word;
 	}
@@ -19,7 +19,7 @@ public class Wordpair {
 		}
 	}
 
-	public void setURL(URL url) {
+	public void setURL(String url) {
 		this.url = url;
 	}
 
@@ -27,7 +27,7 @@ public class Wordpair {
 		return this.word;
 	}
 
-	public URL getURL() {
+	public String getURL() {
 		return this.url;
 	}
 

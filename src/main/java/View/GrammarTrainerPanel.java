@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class GrammarTrainerPanel extends JPanel {
 
-	private URL url;
+	private String url = new String("https://media.istockphoto.com/id/1335247217/vector/loading-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=jARr4Alv-d5U3bCa8eixuX2593e1rDiiWnvJLgHCkQM=");
 	private JLabel image, right, wrong, counter;
 	private JButton end, reset;
 	private JTextField textfield;
@@ -78,7 +78,7 @@ public class GrammarTrainerPanel extends JPanel {
 		this.counter.setText(text);
 	}
 
-	public void setUrl(URL url)	{
+	public void setUrl(String url)	{
 		this.url = url;
 		this.drawImage();
 	}
