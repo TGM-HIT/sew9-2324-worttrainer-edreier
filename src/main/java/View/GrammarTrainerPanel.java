@@ -103,6 +103,22 @@ public class GrammarTrainerPanel extends JPanel {
 		repaint();
 	}
 
+	public void inputEnable(boolean b)	{
+		this.textfield.setEnabled(b);
+	}
+
+	public void resetField()	{
+		this.textfield.setText("");
+	}
+
+	public void enableReset(boolean b)	{
+		this.reset.setEnabled(b);
+	}
+
+	public void enableEnd(boolean b)	{
+		this.end.setEnabled(b);
+	}
+
 	public void correctMessage() {
 		try{
 			URL imgURL = new URL("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F581%2F688%2Foriginal%2Fgreen-check-mark-logo-template-illustration-design-vector-eps-10.jpg&f=1&nofb=1&ipt=93b2976f10549f3fd96d05d1ebc683286a412af01c916869d844480e5ae2232f&ipo=images");
@@ -141,7 +157,4 @@ public class GrammarTrainerPanel extends JPanel {
 			e.printStackTrace();
 		}
 	}
-
-
-
 }

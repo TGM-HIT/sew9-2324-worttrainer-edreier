@@ -2,6 +2,7 @@ package Model;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class GrammarTrainer {
 
@@ -9,6 +10,7 @@ public class GrammarTrainer {
 	private int wrong;
 	private int right;
 	private String input;
+	private int pairIndex=0;
 
 	public GrammarTrainer() {
 		this.pair = new LinkedList<>();
@@ -20,6 +22,10 @@ public class GrammarTrainer {
 
 	public int getWrong() {
 		return this.wrong;
+	}
+
+	public int getPairIndex()	{
+		return this.pairIndex;
 	}
 
 	public void addWordpair(Wordpair pair) {
@@ -38,6 +44,13 @@ public class GrammarTrainer {
 		}
 	}
 
+	public Wordpair getRandomPair()	{
+		Random r = new Random();
+		int rnum = r.nextInt(((this.pair.size()-1)-0)+1)+0;
+		this.pairIndex=rnum;
+		return this.pair.get(rnum);
+	}
+
 	public List<Wordpair> getPairList()	{
 		return this.pair;
 	}
@@ -54,6 +67,16 @@ public class GrammarTrainer {
 
 	public int setWrong(int wrong)	{
 		return this.wrong = wrong;
+	}
+
+	public boolean checkInput(Wordpair current)	{
+		if(this.input.equals(current.getWord()))	{
+			this.right++;
+			return true;
+		} else {
+			this.wrong++;
+			return false;
+		}
 	}
 
 }
