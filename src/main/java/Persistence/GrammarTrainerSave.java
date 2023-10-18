@@ -10,14 +10,8 @@ import java.util.Scanner;
 
 public class GrammarTrainerSave implements Save {
 
-	private GrammarTrainer trainer;
-
-	public GrammarTrainerSave(GrammarTrainer trainer)	{
-		this.trainer = trainer;
-	}
-
 	@Override
-	public void save(String filename) {
+	public void save(String filename, GrammarTrainer trainer) {
 		File f = new File(filename);
 		PrintWriter out = null;
 
@@ -54,7 +48,7 @@ public class GrammarTrainerSave implements Save {
 			int right=0;
 			int wrong=0;
 			right= s.nextInt();
-			s.nextLine(); //Nächste Zeile
+			s.nextLine();
 			wrong= s.nextInt();
 			t.setRight(right);
 			t.setWrong(wrong);

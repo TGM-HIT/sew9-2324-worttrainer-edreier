@@ -46,7 +46,9 @@ public class GrammarTrainer {
 
 	public Wordpair getRandomPair()	{
 		Random rand = new Random();
-		return pair.get(rand.nextInt(pair.size()));
+		int rnum = rand.nextInt((this.pair.size()-1)+1)+0;
+		this.pairIndex=rnum;
+		return this.pair.get(rnum);
 	}
 
 	public List<Wordpair> getPairList()	{

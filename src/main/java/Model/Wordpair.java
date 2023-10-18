@@ -1,5 +1,6 @@
 package Model;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Wordpair {
@@ -20,7 +21,12 @@ public class Wordpair {
 	}
 
 	public void setURL(String url) {
-		this.url = url;
+		try{
+			URL u = new URL(url);
+			this.url = url;
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public String getWord() {

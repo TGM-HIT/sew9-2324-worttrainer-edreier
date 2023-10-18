@@ -17,7 +17,7 @@ public class GrammarTrainerController implements ActionListener {
 	public GrammarTrainerController() {
 		this.panel = new GrammarTrainerPanel(this);
 		this.frame = new GrammarTrainerFrame("Worttrainer",this.panel);
-		this.save = new GrammarTrainerSave(this.grammarTrainer);
+		this.save = new GrammarTrainerSave();
 		this.grammarTrainer = save.load("GrammarTrainer.txt");
 	}
 
@@ -38,7 +38,7 @@ public class GrammarTrainerController implements ActionListener {
 			this.panel.enableReset(false);
 			this.panel.enableEnd(false);
 			this.panel.endMessage();
-			this.save.save("GrammarTrainer.txt");
+			this.save.save("GrammarTrainer.txt",this.grammarTrainer);
 		}
 
 		if(e.getActionCommand().equals("reset"))	{
