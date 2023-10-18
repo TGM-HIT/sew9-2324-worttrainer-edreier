@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Model","l":"GrammarTrainer"},{"p":"Controller","l":"GrammarTrainerController"},{"p":"View","l":"GrammarTrainerFrame"},{"p":"View","l":"GrammarTrainerPanel"},{"p":"Persistence","l":"GrammarTrainerSave"},{"p":"Persistence","l":"Save"},{"p":"Model","l":"Wordpair"}];updateSearchResults();
