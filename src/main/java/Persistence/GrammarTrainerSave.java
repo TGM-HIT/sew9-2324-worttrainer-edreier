@@ -43,26 +43,24 @@ public class GrammarTrainerSave implements Save {
 
 	@Override
 	public GrammarTrainer load(String filename) {
-		GrammarTrainer g = new GrammarTrainer();
-		try(Scanner s = new Scanner(new BufferedReader(new FileReader(filename))))	{
-			while(s.hasNext() && !s.hasNextInt())	{
-				String word = s.nextLine();
+		GrammarTrainer t = new GrammarTrainer();
+		try (Scanner s = new Scanner(new BufferedReader(new FileReader(filename)))) {
+			while (s.hasNext() && !(s.hasNextInt())) {
+				String wort = s.nextLine();
 				String url = s.nextLine();
-				Wordpair pair = new Wordpair(word,url);
-				g.addWordpair(pair);
+				Wordpair wp= new Wordpair(wort, url);
+				t.addWordpair(wp);
 			}
-
-			int right=s.nextInt();
-			s.nextLine();
-			int wrong=s.nextInt();
-
-			g.setRight(right);
-			g.setWrong(wrong);
-			return g;
+			int right=0;
+			int wrong=0;
+			right= s.nextInt();
+			s.nextLine(); //Nächste Zeile
+			wrong= s.nextInt();
+			t.setRight(right);
+			t.setWrong(wrong);
+			return t;
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
-		return g;
 	}
-
 }

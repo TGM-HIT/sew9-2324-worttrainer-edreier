@@ -19,7 +19,6 @@ public class GrammarTrainerController implements ActionListener {
 		this.frame = new GrammarTrainerFrame("Worttrainer",this.panel);
 		this.save = new GrammarTrainerSave(this.grammarTrainer);
 		this.grammarTrainer = save.load("GrammarTrainer.txt");
-		this.save = new GrammarTrainerSave(this.grammarTrainer);
 	}
 
 	public static void main(String[] args) {
