@@ -4,20 +4,15 @@ import Model.GrammarTrainer;
 import View.*;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class GrammarTrainerController {
+public class GrammarTrainerController implements ActionListener {
 
 	private GrammarTrainer grammarTrainer;
-
 	private GrammarTrainerPanel panel;
-
 	private GrammarTrainerFrame frame;
 
 	public GrammarTrainerController() {
-
-	}
-
-	public void actionPerfomed(ActionEvent e) {
 
 	}
 
@@ -25,4 +20,8 @@ public class GrammarTrainerController {
 
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+	}
 }
