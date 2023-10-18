@@ -13,7 +13,8 @@ public class GrammarTrainerController implements ActionListener {
 	private GrammarTrainerFrame frame;
 
 	public GrammarTrainerController() {
-
+		this.panel = new GrammarTrainerPanel(this);
+		this.frame = new GrammarTrainerFrame("Worttrainer",this.panel);
 	}
 
 	public void main(String[] args) {
