@@ -1,7 +1,10 @@
+package Persistence;
+
+import Model.GrammarTrainer;
+
 public interface Save {
 
-	public abstract void save(String filename);
-
-	public abstract GrammarTrainer load(String filename);
+	public void save(String filename);
+	public GrammarTrainer load(String filename);
 
 }

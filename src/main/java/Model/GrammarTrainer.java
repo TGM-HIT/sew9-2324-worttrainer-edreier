@@ -6,11 +6,8 @@ import java.util.List;
 public class GrammarTrainer {
 
 	private List<Wordpair> pair;
-
 	private int wrong;
-
 	private int right;
-
 	private String input;
 
 	public GrammarTrainer() {
@@ -41,10 +38,22 @@ public class GrammarTrainer {
 		}
 	}
 
+	public List<Wordpair> getPairList()	{
+		return this.pair;
+	}
+
 	public void setInput(String input) {
 		if(!input.equals(null))	{
 			this.input = input;
 		}
+	}
+
+	public int setRight(int right)	{
+		return this.right = right;
+	}
+
+	public int setWrong(int wrong)	{
+		return this.wrong = wrong;
 	}
 
 }
