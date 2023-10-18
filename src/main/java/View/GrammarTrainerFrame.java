@@ -3,6 +3,11 @@ package View;
 import javax.swing.*;
 import java.util.Locale;
 
+/**
+ * Standrd Frame klasse
+ * @author Eric Dreier
+ * @version 18-10-2023
+ */
 public class GrammarTrainerFrame extends JFrame {
 
 	public GrammarTrainerFrame(String titel, JPanel panel) {
