@@ -19,5 +19,4 @@ public class GrammarTrainerFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
-
 }

@@ -2,6 +2,7 @@ package Controller;
 
 import Model.GrammarTrainer;
 import Persistence.GrammarTrainerSave;
+import Persistence.Save;
 import View.*;
 
 import java.awt.event.ActionEvent;
@@ -17,7 +18,7 @@ public class GrammarTrainerController implements ActionListener {
 	private GrammarTrainer grammarTrainer;
 	private GrammarTrainerPanel panel;
 	private GrammarTrainerFrame frame;
-	private GrammarTrainerSave save;
+	private Save save;
 
 	public GrammarTrainerController() {
 		this.panel = new GrammarTrainerPanel(this);
